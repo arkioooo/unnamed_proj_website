@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | Velocity</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"><!-- semi bold variant -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+body {
+  background-color: var(--bg);
+  margin: 0;
+  overflow-x: hidden;
+}
+        .hero {
+        	background-color: black;
+            color: var(--light);
+            padding: 10vh 10px;
+            text-align: center;
+            position: relative;
+            height: 55vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }  
+
+        .hero h1 {
+            font-size: 6em;
+            margin: 0;
+            color: var(--color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border: 2px solid var(--color);
+            color: var(--color);
+            border-radius: 5px;
+        }
+        .cta-button:hover{
+        	background: var(--color);
+            transition: 0.3s ease-in-out;
+            color: var(--dark);
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            color: var(--light);
+            max-width: 900px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 2px solid var(--light);
+            outline: none;
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+</style>
+<body>
+	 <div class="nav">
+    	<a href="#" class="logo">
+            <img src="logo.png" alt="Velocity Logo">
+        </a>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+		<div class="search-container">
+            <img src="search_ico.png" alt="Search" class="search-icon" onclick="toggleSearchInput()">
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1>Contact us</h1>
+        <a href="#wrapper" class="cta-button">Fill the form</a>
+    </div>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <hr>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Billing">Billing</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+            <a href="#wrapper" class="cta-button">Submit</a>
+        </form>
+    </div>
+</body>
+<script>
+        function toggleSearchInput() {
+            const searchInput = document.querySelector('.search-input');
+            searchInput.focus();
+        }
+</script>
+</html>

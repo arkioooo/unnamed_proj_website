@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home | Velocity</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"><!-- semi bold variant -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style type="text/css">
+body {
+  background-color: var(--bg);
+  margin: 0;
+  overflow-x: hidden;
+}
+        /* Hero section styles */
+        .hero {
+        	background-color: black;
+            color: var(--light);
+            padding: 10vh 10px;
+            text-align: center;
+            position: relative;
+            height: 90vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }  
+
+        .hero h1 {
+            font-size: 6em;
+            margin: 0;
+            color: var(--color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border: 2px solid var(--color);
+            color: var(--color);
+            border-radius: 5px;
+        }
+        .cta-button:hover{
+        	background: var(--color);
+            transition: 0.3s ease-in-out;
+            color: var(--dark);
+        }
+
+
+.wrapper-container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  margin: 50px 0;
+  
+  display: flex;
+  flex-direction: row;
+  
+  transition: all 200ms ease-in-out;
+}
+
+.image-wrapper {
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+    transition: all 200ms ease-in-out;
+}
+
+.wrapper img {
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+  object-position: top;  
+  transition: all 200ms ease-in-out;
+}
+
+.book-design-image {
+  object-position: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 380px;
+  transition: all 200ms ease-in-out;
+  overflow: hidden;
+  
+}
+
+.wrapper h1 {
+  position: relative;
+  bottom: 0;
+  height: 300px;
+  color: #fff;
+  font-size: 50px;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper:hover img {
+  transform: scale(2);
+  /*object-position: bottom;*/
+}
+
+.wrapper:hover h1 {
+  bottom: 320px;
+  transform: scale(.6);
+}
+
+.wrapper:hover .image-wrapper {
+  width: 1100px;
+}
+
+.wrapper a{
+	text-decoration: none;
+	color: var(--light);
+}
+
+       .left-container {
+            padding: 20px;
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        /* Right Container */
+        .right-container {	
+            padding: 20px;
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+        }
+
+        /* Clear Float */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+</style>
+<body>
+    <div class="nav">
+    	<a href="#" class="logo">
+            <img src="logo.png" alt="Velocity Logo">
+        </a>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+		<div class="search-container">
+            <img src="search_ico.png" alt="Search" class="search-icon" onclick="toggleSearchInput()">
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1><span style="font-size: 1.8em;">Velocity</span> <br> - one stop to all your games</h1>
+        <a href="#wrapper" class="cta-button">Explore Now</a>
+    </div>
+
+
+<div class="left-container" id="wrapper">
+	    <h1>Best Sellers</h1><hr>
+	<div class="wrapper">
+  <div class="image-wrapper">
+  <img src="img/gow-1.webp" /></div>
+  <div class="header-wrapper">
+    <h1><span style="color: var(--accent);">God of War </span><br>	<span style="font-size: 0.7em;">$20</span></h1>
+    <h1><a href="#">Buy now</a></h1>
+  </div>
+</div>
+    	<div class="wrapper">
+  <div class="image-wrapper">
+  <img class="book-design-image" src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1306&q=80" /></div>
+  <div class="header-wrapper">
+    <h1><span style="color: var(--accent);">God of War </span><br>	<span style="font-size: 0.7em;">$20</span></h1>
+    <h1><a href="#">Buy now</a></h1>
+  </div>
+</div>
+</div>
+<div class="right-container">
+		    <h1>New Arrivals</h1><hr>
+	<div class="wrapper">
+  <div class="image-wrapper">
+  <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1583&q=80" /></div>
+  <div class="header-wrapper">
+    <h1><span style="color: var(--accent);">God of War </span><br>	<span style="font-size: 0.7em;">$20</span></h1>
+    <h1><a href="#">Buy now</a></h1>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="image-wrapper">
+  <img class="book-design-image" src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1306&q=80" /></div>
+  <div class="header-wrapper">
+    <h1><span style="color: var(--accent);">God of War </span><br>	<span style="font-size: 0.7em;">$20</span></h1>
+    <h1><a href="#">Buy now</a></h1>	
+  </div>
+</div>
+</div>
+    <div class="clearfix"></div>
+
+    <div class="footer">
+        &copy; 2023 Velocity - One Stop to All Your Games
+        <br><br>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-reddit"></a>
+    </div>
+
+
+
+</body>   
+<script>
+        function toggleSearchInput() {
+            const searchInput = document.querySelector('.search-input');
+            searchInput.focus();
+        }
+</script>
+</html>

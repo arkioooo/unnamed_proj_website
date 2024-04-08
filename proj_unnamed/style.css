@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+/*300 - light variant, 600 - semi bold variant*/
+
+* {
+  box-sizing: border-box;
+  transition: color 0.25s ease;
+}
+:root {
+  --dark: #111;
+  --light: #eeeeee;
+  --color: var(--dark);
+  --bg: var(--light);
+  --accent: #f22222; /*red accent*/
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: var(--light);
+    --bg: var(--dark);
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+	  font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,p{
+	color: var(--color);
+}
+hr {
+	border: 0;
+	height: 4px;
+	background-color: #eeeeee;
+	margin: 20px 0px;
+        }
+
+.fa {
+  padding: 20px;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.fa:hover{
+	background-color: var(--light);
+	color: var(--dark);
+	transition: 0.3s ease-in-out;
+}
+/*navigation bar*/
+		.nav {
+            background-color: var(--bg);
+            padding: 10px; /* Uniform padding on all sides */
+            display: flex; /* Use flexbox to align items */
+            justify-content: space-between; /* Space items evenly */
+            align-items: center; /* Center items vertically */
+            border-bottom: 3px solid var(--dark); /* Add a 3px border at the bottom */
+        }
+ 		.logo {
+            margin-left: 20px; /* Add more space to the left */
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        .logo img {
+            max-height: 30px; /* Set the maximum height for the logo image */
+            margin-top: 10px; 
+        }
+
+        /* Right-aligned elements */
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--light);
+            font-size: 1.2em;
+        }
+        /* Style for navigation links within the nav class */
+        .nav a {
+            color: var(--color);
+            text-decoration: none;
+            margin-right: 15px; /* Adjust margin for spacing between links */
+            font-size: 16px;
+            transition: color 0.3s ease; /* Add transition for color change */
+        }
+
+        /* Hover effect on navigation links within the nav class */
+        .nav a:not(.logo):hover {
+            border-bottom: 2px solid var(--accent);
+            color: var(--accent);
+            transition: 0.3s ease-in-out; /* Change color on hover */
+        }
+
+        /* Style for the search container */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the search icon image */
+        .search-icon {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            object-fit: contain; /* Ensure the image fits within the specified dimensions while maintaining its aspect ratio */
+        }
+
+        /* Style for the search input */
+        .search-input {
+            width: 0;
+            padding: 8px;
+            border: none;
+            background-color: transparent;
+            color: var(--color);
+            transition: width 0.3s ease; /* Add transition for width change */
+            outline: none; /* Remove outline on focus */
+        }
+
+        /* Expand the search input on focus */
+        .search-input:focus {
+            width: 150px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: black;
+            color: var(--light);
+            text-align: center;
+            padding: 40px;
+            max-width: 2200px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
